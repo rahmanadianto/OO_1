@@ -45,6 +45,21 @@ int BilanganRomawi::toInt(std::string bil) {
 
 	return result;
 }
+int BilanganRomawi::tambah(std::string OP1, std::string OP2) {  
+  return toInt(OP1) + toInt(OP2);
+}
+
+int BilanganRomawi::kurang(std::string OP1, std::string OP2) {
+  return toInt(OP1) - toInt(OP2);
+}
+
+int BilanganRomawi::kali(std::string OP1, std::string OP2) {
+  return toInt(OP1) * toInt(OP2);
+}
+
+int BilanganRomawi::bagi(std::string OP1, std::string OP2) {
+  return toInt(OP1) / toInt(OP2);
+}
 
 int BilanganRomawi::intRomawi(char c) {  
   switch(c) {  
