@@ -10,32 +10,27 @@ public:
 	Stack(int _size);
 	// cctor
 	Stack(const Stack<T>& s);
-		
+	// operator =
 	Stack<T>& operator=(const Stack<T>& s);
-
 	//dtor
 	~Stack();
 
+	// OPERASI STACK
 	// pop stack
 	void pop();
-
 	// push el ke dalam stack
 	void push(T el);
-
 	// mereturn elemen top stack
 	T top();
-
 	// return length dari stack
 	int length();
-
 	// cek apakah stack kosong
 	bool empty();
-
 	// cek apakah stack full
 	bool isFull();
-
 	// meresize ukuran stack
 	void grow();
+	
 private:
 	static const int growUnit = 50;
 	static const int defSize = 50; // default size untuk stack

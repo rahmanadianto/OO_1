@@ -3,11 +3,9 @@
 #include <iostream>
 
 History::History() : mainMemory(10), tempMemory(10) {
-
 }
 
 History::~History() {
-
 }
 
 void History::save() {
