@@ -1,4 +1,5 @@
 #include "Romawi.h"
+#include "RomawiExp.h"
 #include <string>
 
 std::string BilanganRomawi::toString(int bil) {
@@ -50,14 +51,24 @@ int BilanganRomawi::tambah(std::string OP1, std::string OP2) {
 }
 
 int BilanganRomawi::kurang(std::string OP1, std::string OP2) {
-  return toInt(OP1) - toInt(OP2);
+  int result = toInt(OP1) - toInt(OP2);
+  if (result = 0) 
+    throw(RomawiExp(VALUE_ZERO));
+  else if (result < 0) 
+    throw(RomawiExp(NEGATIVE_VALUE));
+  return result;
 }
 
 int BilanganRomawi::kali(std::string OP1, std::string OP2) {
-  return toInt(OP1) * toInt(OP2);
+  int result = toInt(OP1) * toInt(OP2);
+  if (result > 4000)
+    throw(RomawiExp(LARGE_NUMBER));
+  return result;
 }
 
 int BilanganRomawi::bagi(std::string OP1, std::string OP2) {
+  if (toInt(OP2) == 0)
+    throw(RomawiExp(DIVIDE_BY_ZERO));
   return toInt(OP1) / toInt(OP2);
 }
 

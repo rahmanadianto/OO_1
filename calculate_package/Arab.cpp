@@ -1,4 +1,5 @@
 #include "Arab.h"
+#include "ArabExp.h"
 #include <string>
 
 std::string BilanganArab::toString(int bil) {
@@ -21,6 +22,8 @@ int BilanganArab::kali(std::string OP1, std::string OP2) {
   return toInt(OP1) * toInt(OP2);
 }
 int BilanganArab::bagi(std::string OP1, std::string OP2) {
+  if (toInt(OP2) == 0)
+    throw(ArabExp(DIVIDE_BY_ZERO));
   return toInt(OP1) / toInt(OP2);
 }
 
