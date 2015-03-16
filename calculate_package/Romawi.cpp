@@ -52,7 +52,7 @@ int BilanganRomawi::tambah(std::string OP1, std::string OP2) {
 
 int BilanganRomawi::kurang(std::string OP1, std::string OP2) {
   int result = toInt(OP1) - toInt(OP2);
-  if (result = 0) 
+  if (result == 0) 
     throw(RomawiExp(VALUE_ZERO));
   else if (result < 0) 
     throw(RomawiExp(NEGATIVE_VALUE));

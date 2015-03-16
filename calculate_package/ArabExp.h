@@ -1,6 +1,8 @@
 #ifndef _ARABEXP_H
 #define _ARABEXP_H
 
+#include <string>
+
 const int DIVIDE_BY_ZERO = 0;
 const int NEGATIVE_VALUE = 1;
 const int LARGE_NUMBER = 2;
