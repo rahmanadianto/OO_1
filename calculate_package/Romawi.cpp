@@ -31,6 +31,15 @@ std::string BilanganRomawi::toString(int bil) {
      return result;
 }
 
+
+int BilanganRomawi::hitung(std::string OP1, std::string OP2, std::string OP) {
+  if (OP == "+") return tambah(OP1, OP2);
+  else if (OP == "-") return kurang(OP1, OP2);
+  else if (OP == "*") return kali(OP1, OP2);
+  else if (OP == "/") return bagi(OP1, OP2);
+  else return 0;
+}
+
 int BilanganRomawi::toInt(std::string bil) {
 
 	int result = 0;
