@@ -1,25 +1,30 @@
+/* Author : Rahman Adianto */
+
 #ifndef _ROMAWI_H
 #define _ROMAWI_H
 
-#include "Bilangan.h"
 #include "Aritmatik.h"
-#include <string>
+#include "Bilangan.h"
+#include "RomawiExp.h"
 
-class BilanganRomawi : public Bilangan, public Aritmatik {
-public:
-	std::string toString(int bil);
-	int toInt(std::string bil);
+class Romawi : public Aritmatik, public Bilangan {
+	public :
+		/* ctor, dtor, cctor, copy assignment */
+		Romawi();
+		Romawi(std::string, int);
+		~Romawi();
+		//Romawi(const Romawi&);
+		//Romawi& operator=(const Romawi&);
 
-  // menghitung OP1, OP2, dengan operator OP
-  int hitung(std::string OP1, std::string OP2, std::string OP);
+		/* ABS method implementation */
+		int calculate();
+		int binaryOpt(std::string, int, int);
+		int unaryOpt(std::string, int);
+		int toInt(std::string);
+		std::string toString(int);
 
-private:
-  int tambah(std::string OP1, std::string OP2);
-  int kurang(std::string OP1, std::string OP2);
-  int kali(std::string OP1, std::string OP2);
-  int bagi(std::string OP1, std::string OP2);
-  
-	int intRomawi(char c);
+	private :
+		int intRomawi(char);
 };
 
 #endif

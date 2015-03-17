@@ -11,11 +11,11 @@ public:
 	// dtor
 	~History();
 
-	// save isi main memory ke file eksternal;
+	// save main memory ke file eksternal;
 	void save();
-	// menampilkan isi mainMemory ke layar
+
 	void showMem(int n = 1);
-	
+	void showAll();
 	void pushToMem(std::string s);
 
 	// output n perintah terakhir ke layar
@@ -31,6 +31,7 @@ public:
 private:
 	stack<std::string> mainMemory;
 	stack<std::string> tempMemory;
+
 };
 
 #endif

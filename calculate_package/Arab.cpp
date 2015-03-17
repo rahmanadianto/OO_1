@@ -1,38 +1,61 @@
+/* Author : Rahman Adianto */
+
 #include "Arab.h"
-#include "ArabExp.h"
 
-std::string BilanganArab::toString(int bil) {
-	std::string bilString;
-	bilString = std::to_string(bil);
-	return bilString;
-}
+Arab::Arab() : Aritmatik() {}
 
-int BilanganArab::hitung(std::string OP1, std::string OP2, std::string OP) {
-  if (OP == "+") return tambah(OP1, OP2);
-  else if (OP == "-") return kurang(OP1, OP2);
-  else if (OP == "*") return kali(OP1, OP2);
-  else if (OP == "/") return bagi(OP1, OP2);
-  else return 0;
-}
+Arab::Arab(std::string eks, int _mode) : Aritmatik(eks, _mode) {}
 
-int BilanganArab::toInt(std::string bil) {
-	int bilInt = std::stoi(bil);
-	return bilInt;
-}
-int BilanganArab::tambah(std::string OP1, std::string OP2) {
-  return toInt(OP1) + toInt(OP2);
-}
-int BilanganArab::kurang(std::string OP1, std::string OP2) {
-  return toInt(OP1) - toInt(OP2);
-}
-int BilanganArab::kali(std::string OP1, std::string OP2) {
-  return toInt(OP1) * toInt(OP2);
-}
-int BilanganArab::bagi(std::string OP1, std::string OP2) {
-  if (toInt(OP2) == 0)
-    throw(ArabExp(DIVIDE_BY_ZERO));
-  return toInt(OP1) / toInt(OP2);
+Arab::~Arab() {}
+
+int Arab::calculate(){
+	stack<int> Calc;
+	std::stringstream stream(ekspresi);
+	std::string word_temp;
+	int operan1, operan2;
+
+	while (stream >> word_temp){
+		if (isOperan(word_temp))
+			Calc.push(toInt(word_temp));
+		else
+			if (word_temp != "~"){
+				operan2 = Calc.top();
+				Calc.pop();
+				operan1 = Calc.top();
+				Calc.pop();
+				Calc.push(binaryOpt(word_temp, operan1, operan2));
+			}
+			else{
+				operan1 = Calc.top();
+				Calc.pop();
+				Calc.push(unaryOpt(word_temp, operan1));
+			}
+	}
+	return Calc.top();
 }
 
+int Arab::binaryOpt(std::string oprt, int a, int b){
+	if (oprt == "+") 
+		return a + b;
+	if (oprt == "-") 
+		return a - b;
+	if (oprt == "*") 
+		return a * b;
+	if (oprt == "/") 
+		if (b == 0)
+			throw(ArabExp(DIVIDE_BY_ZERO));
+		return a / b;
+}
 
+int Arab::unaryOpt(std::string oprt, int a){
+	if (oprt == "~")
+		return -a;
+}
 
+int Arab::toInt(std::string str){
+	return std::stoi(str);
+}
+
+std::string Arab::toString(int bil){
+	return std::to_string(bil);
+}

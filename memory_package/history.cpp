@@ -2,32 +2,48 @@
 #include <fstream>
 #include <iostream>
 
-History::History() : mainMemory(10), tempMemory(10) {
-}
+History::History() {}
 
-History::~History() {
-}
+History::~History() {}
 
 void History::save() {
 	std::ofstream myFile;
-	myFile.open("output.txt");
+	std::string filename;
 	stack<std::string> temp(mainMemory);
+	std::cout << "nama file output : ";
+	std::cin >> filename;
+	myFile.open(filename.c_str());
+	
 	while(!mainMemory.empty()) {
 		myFile << mainMemory.top() << std::endl;
 		mainMemory.pop();
 	}
 	mainMemory = temp;
+	myFile.close();
 }
 
 void History::showMem(int n) {
 	int i = 0;
+	stack<std::string> temp(mainMemory);
+	
 	while(!mainMemory.empty() && i < n) {
-		stack<std::string> temp(mainMemory);
 		std::cout << mainMemory.top() << std::endl;
 		mainMemory.pop();
-		mainMemory = temp;
 		i++;
-	}	
+	}
+	
+	mainMemory = temp;
+}
+
+void History::showAll() {
+	stack<std::string> temp(mainMemory);
+
+	while(!mainMemory.empty()) {
+		std::cout << mainMemory.top() << std::endl;
+		mainMemory.pop();
+	}
+
+	mainMemory = temp;
 }
 
 void History::pushToMem(std::string s) {
