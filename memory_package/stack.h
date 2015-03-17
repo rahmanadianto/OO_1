@@ -1,21 +1,21 @@
-#ifndef STACK_
-#define STACK_
+#ifndef stack_
+#define stack_
 
 template <class T>
-class Stack {
+class stack {
 public:
 	// ctor
-	Stack();
+	stack();
 	// ctor dengan parameter
-	Stack(int _size);
+	stack(int _size);
 	// cctor
-	Stack(const Stack<T>& s);
+	stack(const stack<T>& s);
 	// operator =
-	Stack<T>& operator=(const Stack<T>& s);
+	stack<T>& operator=(const stack<T>& s);
 	//dtor
-	~Stack();
+	~stack();
 
-	// OPERASI STACK
+	// OPERASI stack
 	// pop stack
 	void pop();
 	// push el ke dalam stack
@@ -34,94 +34,94 @@ public:
 private:
 	static const int growUnit = 50;
 	static const int defSize = 50; // default size untuk stack
-	int topStack;
+	int topstack;
 	int size;
 	T* data;
 };
 
 template <class T>
-Stack<T>::Stack() {
+stack<T>::stack() {
 	size = defSize;
-	topStack = 0;
+	topstack = 0;
 	data = new T [size];
 }
 
 template <class T>
-Stack<T>::Stack(int _size) {
+stack<T>::stack(int _size) {
 	size = _size;
-	topStack = 0;
+	topstack = 0;
 	data = new T [size];
 }
 
 template <class T>
-Stack<T>::Stack(const Stack<T>& s) {
+stack<T>::stack(const stack<T>& s) {
 	size = s.size;
-	topStack = s.topStack;
+	topstack = s.topstack;
 	data = new T [size];
 
-	for (int i = 0; i < topStack; i++) {
+	for (int i = 0; i < topstack; i++) {
 		data[i] = s.data[i];
 	}
 }
 
 template <class T>
-Stack<T>& Stack<T>::operator=(const Stack<T>& s) {
+stack<T>& stack<T>::operator=(const stack<T>& s) {
 	delete [] data;
 	size = s.size;
-	topStack = s.topStack;
+	topstack = s.topstack;
 	data = new T [size];
 
-	for (int i = 0; i < topStack; i++) {
+	for (int i = 0; i < topstack; i++) {
 		data[i] = s.data[i];
 	}
 
 	return *this;
 }
 template <class T>
-Stack<T>::~Stack() {
+stack<T>::~stack() {
 	delete [] data;
 }
 
 template <class T>
-void Stack<T>::push(T el) {
+void stack<T>::push(T el) {
 	if (isFull()) {
 		grow();
 	}
-	data[topStack] = el;
-	topStack++;
+	data[topstack] = el;
+	topstack++;
 }
 template <class T>
-void Stack<T>::pop() {
+void stack<T>::pop() {
 	if (!empty()) {
-		topStack--;
+		topstack--;
 	}
 }
 
 template <class T>
-T Stack<T>::top() {
-	return data[topStack-1];
+T stack<T>::top() {
+	return data[topstack-1];
 }
 
 template <class T>
-int Stack<T>::length() {
-	return topStack;
+int stack<T>::length() {
+	return topstack;
 }
 template <class T>
-bool Stack<T>::empty() {
-	return topStack == 0;
+bool stack<T>::empty() {
+	return topstack == 0;
 }	
 
 template <class T>
-bool Stack<T>::isFull() {
-	return topStack == size;
+bool stack<T>::isFull() {
+	return topstack == size;
 }
 
 template <class T>
-void Stack<T>::grow() {
+void stack<T>::grow() {
 	size += growUnit;
 	T* newData = new T[size];
 
-	for (int i = 0; i < topStack; i++) {
+	for (int i = 0; i < topstack; i++) {
 		newData[i] = data[i];
 	}
 
