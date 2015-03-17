@@ -1,7 +1,7 @@
-#include "Arab.h"
-#include "ArabExp.h"
 #include <string>
 #include <iostream>
+#include "Arab.h"
+#include "ArabExp.h"
 using namespace std;
 
 int main() {
@@ -15,7 +15,7 @@ int main() {
 
   try {
     int hasilBagi = B.bagi(OP1, OP2);
-    cout << "hasil bagi" << hasilBagi;
+    cout << "hasil bagi = " << hasilBagi << endl;
   }
   catch (ArabExp& exp) {
     exp.displayMsg();

@@ -1,6 +1,5 @@
 #include "Romawi.h"
 #include "RomawiExp.h"
-#include <string>
 
 std::string BilanganRomawi::toString(int bil) {
 	struct bilromawi_t { int value; char const* numeral; };

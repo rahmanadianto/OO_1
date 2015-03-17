@@ -1,6 +1,5 @@
 #include "Arab.h"
 #include "ArabExp.h"
-#include <string>
 
 std::string BilanganArab::toString(int bil) {
 	std::string bilString;

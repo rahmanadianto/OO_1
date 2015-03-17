@@ -14,7 +14,7 @@ int main() {
 
   try {
     int hasilKurang = B.kurang(OP1, OP2);
-    cout << "hasil kurang = " << hasilKurang << endl;
+    cout << "hasil kurang = " << hasilKurang << " = " << B.toString(hasilKurang) << endl;
   }
 
   catch (RomawiExp& exp) {
