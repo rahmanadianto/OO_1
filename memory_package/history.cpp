@@ -86,7 +86,7 @@ void History::undo(int n) {
 void History::redo(int n) {
 	assert(n > 0);
 	int i = 0;
-	while(!tempMemory.empty() || i < n) {
+	while(!tempMemory.empty() && i < n) {
 		mainMemory.push(tempMemory.top());
 		tempMemory.pop();
 		++i;
