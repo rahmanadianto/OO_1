@@ -17,12 +17,12 @@ Boolean::~Boolean(){}
 
 bool Boolean::isOperan(std::string opr){
 	bool str = ((opr == "true") || (opr == "false") || (opr == "nottrue") || (opr == "notfalse"));
-	bool biner = ((opr == "1") || (opr == "0") || (opr == "~1") || (opr == "~0"));
+	bool biner = ((opr == "1") || (opr == "0") || (opr == "!1") || (opr == "!0"));
 	return (str || biner);
 }
 
 bool Boolean::isOperator(std::string oprt){
-	return ((oprt == "and") || (oprt == "or") || (oprt == "not"));
+	return ((oprt == "and") || (oprt == "or") || (oprt == "not") || (oprt == "!"));
 }
 
 bool Boolean::higherPrecedence(std::string high, std::string low){
@@ -37,7 +37,7 @@ bool Boolean::binaryOpt(std::string oprt, bool a, bool b){
 }
 
 bool Boolean::unaryOpt(std::string oprt, bool a){
-	return oprt == "not" ? !a : false;
+	return ((oprt == "not") || (oprt == "!")) ? !a : false;
 }
 
 bool Boolean::calculate(){
@@ -50,7 +50,7 @@ bool Boolean::calculate(){
 		if (isOperan(word_temp))
 			Calc.push(toBool(word_temp));
 		else
-			if (word_temp != "not"){
+			if ((word_temp != "not") && (word_temp != "!")){
 				operan2 = Calc.top();
 				Calc.pop();
 				operan1 = Calc.top();
@@ -79,9 +79,9 @@ bool Boolean::toBool(std::string str){
 		return true;
 	if (str == "0")
 		return false;
-	if (str == "~1")
+	if (str == "!1")
 		return false;
-	if (str == "~0")
+	if (str == "!0")
 		return true;
 }
 
