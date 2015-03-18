@@ -72,7 +72,7 @@ void History::empty() {
 	}
 }
 
-std::string History::undo(int n) {
+void History::undo(int n) {
 	int i = 0;
 	while(!mainMemory.empty() && i < n) {
 		tempMemory.push(mainMemory.top());
@@ -81,7 +81,7 @@ std::string History::undo(int n) {
 	}
 }
 
-std::string History::redo(int n) {
+void History::redo(int n) {
 	int i = 0;
 	while(!tempMemory.empty() || i < n) {
 		mainMemory.push(tempMemory.top());

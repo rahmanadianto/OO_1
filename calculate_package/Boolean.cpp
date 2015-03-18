@@ -16,7 +16,9 @@ Boolean::Boolean(std::string eks, int _mode) : Ekspresi(eks, _mode) {
 Boolean::~Boolean(){}
 
 bool Boolean::isOperan(std::string opr){
-	return ((opr == "true") || (opr == "false") || (opr == "nottrue") || (opr == "notfalse"));
+	bool str = ((opr == "true") || (opr == "false") || (opr == "nottrue") || (opr == "notfalse"));
+	bool biner = ((opr == "1") || (opr == "0") || (opr == "~1") || (opr == "~0"));
+	return (str || biner);
 }
 
 bool Boolean::isOperator(std::string oprt){
@@ -37,7 +39,6 @@ bool Boolean::binaryOpt(std::string oprt, bool a, bool b){
 bool Boolean::unaryOpt(std::string oprt, bool a){
 	return oprt == "not" ? !a : false;
 }
-
 
 bool Boolean::calculate(){
 	stack<bool> Calc;
@@ -73,6 +74,14 @@ bool Boolean::toBool(std::string str){
 	if (str == "nottrue")
 		return false;
 	if (str == "notfalse")
+		return true;
+	if (str == "1")
+		return true;
+	if (str == "0")
+		return false;
+	if (str == "~1")
+		return false;
+	if (str == "~0")
 		return true;
 }
 

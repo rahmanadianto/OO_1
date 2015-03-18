@@ -6,6 +6,7 @@
 
 #include <string>
 #include "stack.h"
+
 /**
 * History class. menangani memori kalkulator
 */
@@ -54,22 +55,18 @@ public:
 	void empty();
 
 	/**
-	* output n perintah terakhir ke layar 
-	* n - 1 perintah terakhir di-pop dan di-push di push ke temp memory
+	* menghapus n history perhitungan dimulai dari history terakhir
 	* prekondisi: main memory tidak kosong
 	* @param n jumlah undo
-	* @return string dari memory
 	*/
-	std::string undo(int n);
+	void undo(int n);
 
 	/**
-	* output n perintah terakhir yang ada di temp memory ke layar
-	* n - 1 perintak terakhir di-pop dan di-push ke main memory
+	* mengembalikan n buah history perhitungan yang pernah diundo
 	* prekondisi: sudah pernah diundo
 	* @param n jumlah redo
-	* @return string dari memory
 	*/
-	std::string redo(int n);
+	void redo(int n);
 
 
 private:

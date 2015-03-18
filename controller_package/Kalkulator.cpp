@@ -51,15 +51,30 @@ void Kalkulator::run(){
 				history.save();
 			}
 			else if (args[0] == "showMem") {
-				history.showMem(std::stoi(args[1]));
+				try {
+					history.showMem(std::stoi(args[1]));
+				}
+				catch(...) {
+					std::cout <<"command tidak tepat" << std::endl;
+				}
 			}
 			else if (args[0] == "undo") {
-				int n = std::stoi(args[1]);
-				history.undo(n);
+				try {
+					int n = std::stoi(args[1]);
+					history.undo(n);	
+				}
+				catch(...) {
+					std::cout <<"command tidak tepat" << std::endl;
+				}	
 			}
 			else if (args[0] == "redo") {
-				int n = std::stoi(args[1]);
-				history.redo(n);
+				try {
+					int n = std::stoi(args[1]);
+					history.redo(n);
+				}
+				catch(...) {
+					std::cout <<"command tidak tepat" << std::endl;
+				}
 			}
 			else if (command == "help") {
 				std::cout << "Petunjuk Penggunaan Program Kalkulator" << std::endl;
@@ -71,19 +86,24 @@ void Kalkulator::run(){
 				std::cout << std::setw(15) << std::left << "6. quit " << ": keluar dari program" << std::endl;
 			}
 			else{
+				std::string result;
 				try {
 					if (Setting::getModeBilangan() == Setting::ARAB){
 						Arab arab(std::string(command), Setting::getModeEkspresi());
-						std::cout << "==> " << arab.toString(arab.calculate()) << std::endl;
+						result = arab.toString(arab.calculate());
+						std::cout << "==> " << result << std::endl;
 					}
 					if (Setting::getModeBilangan() == Setting::ROMAWI){
 						Romawi romawi(std::string(command), Setting::getModeEkspresi());
-						std::cout << "==> " << romawi.toString(romawi.calculate()) << std::endl;
+						result = romawi.toString(romawi.calculate());
+						std::cout << "==> " << result << std::endl;
 					}
 					if (Setting::getModeBilangan() == Setting::BOOLEAN){
 						Boolean boolean(std::string(command), Setting::getModeEkspresi());
-						std::cout << "==> " << boolean.toString(boolean.calculate()) << std::endl;
+						result = boolean.toString(boolean.calculate());
+						std::cout << "==> " << result << std::endl;
 					}
+				history.pushToMem(command + " = " + result);
 				} catch (ArabExp& e){
 					e.displayMsg();
 				} catch (RomawiExp& e){
