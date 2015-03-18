@@ -6,6 +6,8 @@ Dependencies
 	- ArabExp.cpp
 	- Ekspresi.cpp	
 	- Aritmatik.cpp
+Keterangan :
+Menggunakan ISO C++11
 
 2. Testing kelas Romawi
 	- Romawi_driver.cpp
@@ -23,6 +25,3 @@ Dependencies
 	- Aritmatik_driver.cpp
 	- Aritmatik.cpp
 	- Ekspresi.cpp
-
-Keterangan :
-Menggunakan ISO C++11
