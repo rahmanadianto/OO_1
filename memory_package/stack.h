@@ -4,6 +4,8 @@
 #ifndef STACK_
 #define STACK_
 
+#include <cassert>
+
 /**
 * Stack class. menangani penyimpanan secara First In Last Out
 */
@@ -190,7 +192,7 @@ void stack<T>::push(T el) {
 
 template <class T>
 void stack<T>::pop() {
-	if (!empty())
+	assert(!empty());
 		topStack--;
 }
 

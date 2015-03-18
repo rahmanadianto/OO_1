@@ -1,6 +1,8 @@
 # TUBES OO_1
 
 File ini merupakan manual untuk penggunaan program kalkulator 
+Program hanya dapat dicompile dan berjalan pada sistem operasi LINUX dengan
+menambahkan library [readline](http://www.gnu.org/s/readline/)
 
 ## Pilihan Operator
 ### 1. Operator Aritmatika

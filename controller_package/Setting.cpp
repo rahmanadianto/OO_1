@@ -4,6 +4,7 @@
 #include "Setting.h"
 #include <iostream>
 #include <cstdlib>
+#include <cassert>
 
 /* Inisialisasi default */
 int Setting::modeEkspresi = INFIX;
@@ -30,7 +31,8 @@ void Setting::setModeEkspresi(){
  	std::cout << "3. Ekspresi Postfix" << std::endl << std::endl;
  	std::cout << "Pilihan : ";
 	std::cin >> modeEkspresi;
-	std::cin.ignore();	
+	std::cin.ignore();
+	assert(modeEkspresi >= 1 && modeEkspresi <= 3);
 }
 
 void Setting::setModeOperator(){
@@ -41,6 +43,7 @@ void Setting::setModeOperator(){
 	std::cout << "Pilihan : ";
 	std::cin >> modeOperator;
 	std::cin.ignore();
+	assert(modeOperator >= 1 && modeOperator <= 3);
 }
 
 void Setting::setModeBilangan(){
@@ -52,6 +55,7 @@ void Setting::setModeBilangan(){
 		std::cout << "Pilihan : ";
 		std::cin >> modeBilangan;
 		std::cin.ignore();
+		assert(modeBilangan >= 1 && modeBilangan <= 3);
 	}
 	else {
 		modeBilangan = BOOLEAN;

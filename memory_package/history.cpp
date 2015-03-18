@@ -26,6 +26,7 @@ void History::save() {
 }
 
 void History::showMem(int n) {
+	assert(n > 0);
 	std::cout << "History perhitungan :" << std::endl;
 	int i = 0;
 	stack<std::string> temp(mainMemory);
@@ -73,6 +74,7 @@ void History::empty() {
 }
 
 void History::undo(int n) {
+	assert(n > 0);
 	int i = 0;
 	while(!mainMemory.empty() && i < n) {
 		tempMemory.push(mainMemory.top());
@@ -82,6 +84,7 @@ void History::undo(int n) {
 }
 
 void History::redo(int n) {
+	assert(n > 0);
 	int i = 0;
 	while(!tempMemory.empty() || i < n) {
 		mainMemory.push(tempMemory.top());
