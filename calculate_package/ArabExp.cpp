@@ -1,4 +1,4 @@
-x/* Author : Rahman Adianto */
+/* Author : Rahman Adianto */
 
 #include <iostream>
 #include "ArabExp.h"
