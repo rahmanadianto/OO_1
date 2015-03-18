@@ -1,0 +1,220 @@
+\hypertarget{class_ekspresi}{}\section{Ekspresi Class Reference}
+\label{class_ekspresi}\index{Ekspresi@{Ekspresi}}
+Inheritance diagram for Ekspresi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ekspresi}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ekspresi_af2e8f739d94a28af80105222107f4d3e}{Ekspresi} ()
+\item 
+\hyperlink{class_ekspresi_ac39dbe3ebc56004cfb24649c36cb29a5}{Ekspresi} (std\+::string, int)
+\item 
+\hyperlink{class_ekspresi_ac385e453495f162dc5d98ded7f1ea30a}{$\sim$\+Ekspresi} ()
+\item 
+std\+::string \hyperlink{class_ekspresi_a40f6b3556c45c99ba94d4f19a420c025}{get\+Ekspresi} ()
+\item 
+int \hyperlink{class_ekspresi_aa1a9b559652450e0759da6b8231a2dd4}{get\+Initial\+Id} ()
+\item 
+void \hyperlink{class_ekspresi_a554bbd85ea4c39188e9b40a79993d048}{set\+Ekspresi} (std\+::string)
+\item 
+virtual bool \hyperlink{class_ekspresi_ab742ee9ef7a7bc49ea9d3d96eae69e04}{is\+Operan} (std\+::string)=0
+\item 
+virtual bool \hyperlink{class_ekspresi_a224d9cae2ee4d104d7ece7b853746dfc}{is\+Operator} (std\+::string)=0
+\item 
+virtual bool \hyperlink{class_ekspresi_a52ccbd282ee50c4c3d58eab0d662f0f9}{higher\+Precedence} (std\+::string, std\+::string)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_ekspresi_a1177f9babe3330a4f04adbac396e0e0e}{get\+Operator\+Weight} (std\+::string)=0
+\item 
+void \hyperlink{class_ekspresi_aeb458e4d9a607aac1aa021bc13fde362}{Prefix\+To\+Postfix} ()
+\item 
+void \hyperlink{class_ekspresi_acb880011d232d3624844eab3753e6dbd}{Infix\+To\+Postfix} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_ekspresi_a9d5082854ad50d47e63eb1bf4e263a3a}{ekspresi}
+\item 
+const int \hyperlink{class_ekspresi_a7f5e4a40d4388ce071287e2f961c2ff1}{id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ekspresi_af2e8f739d94a28af80105222107f4d3e}{}\index{Ekspresi@{Ekspresi}!Ekspresi@{Ekspresi}}
+\index{Ekspresi@{Ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{Ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}Ekspresi\+::\+Ekspresi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_af2e8f739d94a28af80105222107f4d3e}
+A constructor. ekpresi =\char`\"{}\char`\"{} Memnginisialisasi id = Setting\+::\+Postfix dengan ctor initilization list \hypertarget{class_ekspresi_ac39dbe3ebc56004cfb24649c36cb29a5}{}\index{Ekspresi@{Ekspresi}!Ekspresi@{Ekspresi}}
+\index{Ekspresi@{Ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{Ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}Ekspresi\+::\+Ekspresi (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{eks, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_ac39dbe3ebc56004cfb24649c36cb29a5}
+A constructor. mengisi ekspresi menjadi eks Memnginisialisasi id = mode dengan ctor initilization list 
+\begin{DoxyParams}{Parameters}
+{\em mode} & sebagai int \\
+\hline
+{\em eks} & sebagai string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ekspresi_ac385e453495f162dc5d98ded7f1ea30a}{}\index{Ekspresi@{Ekspresi}!````~Ekspresi@{$\sim$\+Ekspresi}}
+\index{````~Ekspresi@{$\sim$\+Ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{$\sim$\+Ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}Ekspresi\+::$\sim$\+Ekspresi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_ac385e453495f162dc5d98ded7f1ea30a}
+A destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ekspresi_a40f6b3556c45c99ba94d4f19a420c025}{}\index{Ekspresi@{Ekspresi}!get\+Ekspresi@{get\+Ekspresi}}
+\index{get\+Ekspresi@{get\+Ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{get\+Ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Ekspresi\+::get\+Ekspresi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_a40f6b3556c45c99ba94d4f19a420c025}
+A getter. mendapatkan ekspresi \begin{DoxyReturn}{Returns}
+string sebagai ekspresi 
+\end{DoxyReturn}
+\hypertarget{class_ekspresi_aa1a9b559652450e0759da6b8231a2dd4}{}\index{Ekspresi@{Ekspresi}!get\+Initial\+Id@{get\+Initial\+Id}}
+\index{get\+Initial\+Id@{get\+Initial\+Id}!Ekspresi@{Ekspresi}}
+\subsubsection[{get\+Initial\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Ekspresi\+::get\+Initial\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_aa1a9b559652450e0759da6b8231a2dd4}
+A getter. mendapatkan id \begin{DoxyReturn}{Returns}
+id , integer 
+\end{DoxyReturn}
+\hypertarget{class_ekspresi_a1177f9babe3330a4f04adbac396e0e0e}{}\index{Ekspresi@{Ekspresi}!get\+Operator\+Weight@{get\+Operator\+Weight}}
+\index{get\+Operator\+Weight@{get\+Operator\+Weight}!Ekspresi@{Ekspresi}}
+\subsubsection[{get\+Operator\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Ekspresi\+::get\+Operator\+Weight (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_ekspresi_a1177f9babe3330a4f04adbac396e0e0e}
+a protected pure virtual member 
+\begin{DoxyParams}{Parameters}
+{\em oprt} & yang berupa string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer yang berupa bobot 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_aritmatik_acb650d44adc6254fb3e0f027838af2db}{Aritmatik}.
+
+\hypertarget{class_ekspresi_a52ccbd282ee50c4c3d58eab0d662f0f9}{}\index{Ekspresi@{Ekspresi}!higher\+Precedence@{higher\+Precedence}}
+\index{higher\+Precedence@{higher\+Precedence}!Ekspresi@{Ekspresi}}
+\subsubsection[{higher\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Ekspresi\+::higher\+Precedence (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{, }
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_ekspresi_a52ccbd282ee50c4c3d58eab0d662f0f9}
+A pure virtual member. 
+\begin{DoxyParams}{Parameters}
+{\em high} & yang berupa string \\
+\hline
+{\em low} & yang berupa string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang berupa true jika bobot high $>$ bobot low 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_aritmatik_a2bdb89adcf3b187382a40f3c66e8b649}{Aritmatik}, and \hyperlink{class_boolean_a98d763cbf5a4593f5ec268bf7ccd3553}{Boolean}.
+
+\hypertarget{class_ekspresi_acb880011d232d3624844eab3753e6dbd}{}\index{Ekspresi@{Ekspresi}!Infix\+To\+Postfix@{Infix\+To\+Postfix}}
+\index{Infix\+To\+Postfix@{Infix\+To\+Postfix}!Ekspresi@{Ekspresi}}
+\subsubsection[{Infix\+To\+Postfix}]{\setlength{\rightskip}{0pt plus 5cm}void Ekspresi\+::\+Infix\+To\+Postfix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ekspresi_acb880011d232d3624844eab3753e6dbd}
+protected method mengubah dari infix menjadi postfix \hypertarget{class_ekspresi_ab742ee9ef7a7bc49ea9d3d96eae69e04}{}\index{Ekspresi@{Ekspresi}!is\+Operan@{is\+Operan}}
+\index{is\+Operan@{is\+Operan}!Ekspresi@{Ekspresi}}
+\subsubsection[{is\+Operan}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Ekspresi\+::is\+Operan (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_ekspresi_ab742ee9ef7a7bc49ea9d3d96eae69e04}
+A pure virtual member. 
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang berupa true jika string adalah operan 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_aritmatik_ad3bebd263fb4d94e850848c282f80d6b}{Aritmatik}, and \hyperlink{class_boolean_a9c5afca5ecb28f04ac727a56d646d057}{Boolean}.
+
+\hypertarget{class_ekspresi_a224d9cae2ee4d104d7ece7b853746dfc}{}\index{Ekspresi@{Ekspresi}!is\+Operator@{is\+Operator}}
+\index{is\+Operator@{is\+Operator}!Ekspresi@{Ekspresi}}
+\subsubsection[{is\+Operator}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Ekspresi\+::is\+Operator (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_ekspresi_a224d9cae2ee4d104d7ece7b853746dfc}
+A pure virtual member. 
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang berupa true jika string adalah operator 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_aritmatik_a22df02b3a845fd0af3e1bae28121ba99}{Aritmatik}, and \hyperlink{class_boolean_a37e98802c20820e8cdbbfa38232b4930}{Boolean}.
+
+\hypertarget{class_ekspresi_aeb458e4d9a607aac1aa021bc13fde362}{}\index{Ekspresi@{Ekspresi}!Prefix\+To\+Postfix@{Prefix\+To\+Postfix}}
+\index{Prefix\+To\+Postfix@{Prefix\+To\+Postfix}!Ekspresi@{Ekspresi}}
+\subsubsection[{Prefix\+To\+Postfix}]{\setlength{\rightskip}{0pt plus 5cm}void Ekspresi\+::\+Prefix\+To\+Postfix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ekspresi_aeb458e4d9a607aac1aa021bc13fde362}
+protected method mengubah dari prefix menjadi postfix \hypertarget{class_ekspresi_a554bbd85ea4c39188e9b40a79993d048}{}\index{Ekspresi@{Ekspresi}!set\+Ekspresi@{set\+Ekspresi}}
+\index{set\+Ekspresi@{set\+Ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{set\+Ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}void Ekspresi\+::set\+Ekspresi (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{eks}
+\end{DoxyParamCaption}
+)}\label{class_ekspresi_a554bbd85ea4c39188e9b40a79993d048}
+A setter. menset string dengan eks 
+\begin{DoxyParams}{Parameters}
+{\em eks} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ekspresi_a9d5082854ad50d47e63eb1bf4e263a3a}{}\index{Ekspresi@{Ekspresi}!ekspresi@{ekspresi}}
+\index{ekspresi@{ekspresi}!Ekspresi@{Ekspresi}}
+\subsubsection[{ekspresi}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Ekspresi\+::ekspresi\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ekspresi_a9d5082854ad50d47e63eb1bf4e263a3a}
+protected variable yang berupa string \hypertarget{class_ekspresi_a7f5e4a40d4388ce071287e2f961c2ff1}{}\index{Ekspresi@{Ekspresi}!id@{id}}
+\index{id@{id}!Ekspresi@{Ekspresi}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}const int Ekspresi\+::id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ekspresi_a7f5e4a40d4388ce071287e2f961c2ff1}
+protected variable yang berupa konstanta integer 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ekspresi.\+h\item 
+Ekspresi.\+cpp\end{DoxyCompactItemize}

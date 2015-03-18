@@ -1,0 +1,156 @@
+\hypertarget{class_aritmatik}{}\section{Aritmatik Class Reference}
+\label{class_aritmatik}\index{Aritmatik@{Aritmatik}}
+
+
+{\ttfamily \#include $<$Aritmatik.\+h$>$}
+
+Inheritance diagram for Aritmatik\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_aritmatik}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_aritmatik_aa7da5dc54ef0b249411dcd39def1cd39}{Aritmatik} ()
+\item 
+\hyperlink{class_aritmatik_ab399b33108b9a947b3ceb4b980c17949}{Aritmatik} (std\+::string, int)
+\item 
+\hyperlink{class_aritmatik_a418c3d95a5648adb083cacb09d63f0aa}{$\sim$\+Aritmatik} ()
+\item 
+bool \hyperlink{class_aritmatik_ad3bebd263fb4d94e850848c282f80d6b}{is\+Operan} (std\+::string)
+\item 
+bool \hyperlink{class_aritmatik_a22df02b3a845fd0af3e1bae28121ba99}{is\+Operator} (std\+::string)
+\item 
+bool \hyperlink{class_aritmatik_a2bdb89adcf3b187382a40f3c66e8b649}{higher\+Precedence} (std\+::string, std\+::string)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_aritmatik_acb650d44adc6254fb3e0f027838af2db}{get\+Operator\+Weight} (std\+::string)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_aritmatik}{Aritmatik} class. menangani ekspresi yang menggunakan operator aritmatik, turunan dari kelas \hyperlink{class_ekspresi}{Ekspresi}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_aritmatik_aa7da5dc54ef0b249411dcd39def1cd39}{}\index{Aritmatik@{Aritmatik}!Aritmatik@{Aritmatik}}
+\index{Aritmatik@{Aritmatik}!Aritmatik@{Aritmatik}}
+\subsubsection[{Aritmatik}]{\setlength{\rightskip}{0pt plus 5cm}Aritmatik\+::\+Aritmatik (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aritmatik_aa7da5dc54ef0b249411dcd39def1cd39}
+A constructor. Membuat Objek \hyperlink{class_ekspresi}{Ekspresi} \hypertarget{class_aritmatik_ab399b33108b9a947b3ceb4b980c17949}{}\index{Aritmatik@{Aritmatik}!Aritmatik@{Aritmatik}}
+\index{Aritmatik@{Aritmatik}!Aritmatik@{Aritmatik}}
+\subsubsection[{Aritmatik}]{\setlength{\rightskip}{0pt plus 5cm}Aritmatik\+::\+Aritmatik (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{eks, }
+\item[{int}]{\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{class_aritmatik_ab399b33108b9a947b3ceb4b980c17949}
+A constructor. Membuat Objek \hyperlink{class_aritmatik}{Aritmatik} dengan ekspresi 
+\begin{DoxyParams}{Parameters}
+{\em eks} & sebuah string \\
+\hline
+{\em mode} & yang berupa integer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_aritmatik_a418c3d95a5648adb083cacb09d63f0aa}{}\index{Aritmatik@{Aritmatik}!````~Aritmatik@{$\sim$\+Aritmatik}}
+\index{````~Aritmatik@{$\sim$\+Aritmatik}!Aritmatik@{Aritmatik}}
+\subsubsection[{$\sim$\+Aritmatik}]{\setlength{\rightskip}{0pt plus 5cm}Aritmatik\+::$\sim$\+Aritmatik (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aritmatik_a418c3d95a5648adb083cacb09d63f0aa}
+A destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_aritmatik_acb650d44adc6254fb3e0f027838af2db}{}\index{Aritmatik@{Aritmatik}!get\+Operator\+Weight@{get\+Operator\+Weight}}
+\index{get\+Operator\+Weight@{get\+Operator\+Weight}!Aritmatik@{Aritmatik}}
+\subsubsection[{get\+Operator\+Weight}]{\setlength{\rightskip}{0pt plus 5cm}int Aritmatik\+::get\+Operator\+Weight (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{oprt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_aritmatik_acb650d44adc6254fb3e0f027838af2db}
+fungsi protected yang menghasilkan berat operator 
+\begin{DoxyParams}{Parameters}
+{\em oprt} & yang berupa string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer yang berupa bobot 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ekspresi_a1177f9babe3330a4f04adbac396e0e0e}{Ekspresi}.
+
+\hypertarget{class_aritmatik_a2bdb89adcf3b187382a40f3c66e8b649}{}\index{Aritmatik@{Aritmatik}!higher\+Precedence@{higher\+Precedence}}
+\index{higher\+Precedence@{higher\+Precedence}!Aritmatik@{Aritmatik}}
+\subsubsection[{higher\+Precedence}]{\setlength{\rightskip}{0pt plus 5cm}bool Aritmatik\+::higher\+Precedence (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{high, }
+\item[{std\+::string}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aritmatik_a2bdb89adcf3b187382a40f3c66e8b649}
+fungsi yang mengecek apakah string high mempunyai prioritas lebih tinggi dari string low 
+\begin{DoxyParams}{Parameters}
+{\em high} & yang berupa string \\
+\hline
+{\em low} & yang berupa string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang bernilai true jika string high $>$ string low 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ekspresi_a52ccbd282ee50c4c3d58eab0d662f0f9}{Ekspresi}.
+
+\hypertarget{class_aritmatik_ad3bebd263fb4d94e850848c282f80d6b}{}\index{Aritmatik@{Aritmatik}!is\+Operan@{is\+Operan}}
+\index{is\+Operan@{is\+Operan}!Aritmatik@{Aritmatik}}
+\subsubsection[{is\+Operan}]{\setlength{\rightskip}{0pt plus 5cm}bool Aritmatik\+::is\+Operan (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{opr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aritmatik_ad3bebd263fb4d94e850848c282f80d6b}
+fungsi yang mengecek apakah string berupa operan 
+\begin{DoxyParams}{Parameters}
+{\em opr} & yang berupa operan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang bernilai true jika string == operan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ekspresi_ab742ee9ef7a7bc49ea9d3d96eae69e04}{Ekspresi}.
+
+\hypertarget{class_aritmatik_a22df02b3a845fd0af3e1bae28121ba99}{}\index{Aritmatik@{Aritmatik}!is\+Operator@{is\+Operator}}
+\index{is\+Operator@{is\+Operator}!Aritmatik@{Aritmatik}}
+\subsubsection[{is\+Operator}]{\setlength{\rightskip}{0pt plus 5cm}bool Aritmatik\+::is\+Operator (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{oprt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aritmatik_a22df02b3a845fd0af3e1bae28121ba99}
+fungsi yang mengecek apakah string berupa operator 
+\begin{DoxyParams}{Parameters}
+{\em opr} & yang berupa operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool yang bernilai true jika string == operator 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_ekspresi_a224d9cae2ee4d104d7ece7b853746dfc}{Ekspresi}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Aritmatik.\+h\item 
+Aritmatik.\+cpp\end{DoxyCompactItemize}

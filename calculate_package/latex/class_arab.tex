@@ -1,0 +1,178 @@
+\hypertarget{class_arab}{}\section{Arab Class Reference}
+\label{class_arab}\index{Arab@{Arab}}
+
+
+{\ttfamily \#include $<$Arab.\+h$>$}
+
+Inheritance diagram for Arab\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_arab}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_arab_afdddf6ff9c7724ddb71c625db0847893}{Arab} ()
+\item 
+\hyperlink{class_arab_a980e87ff4bcc914e8206b8850bc19f2b}{Arab} (std\+::string, int)
+\item 
+\hyperlink{class_arab_a2629b0540731753334ebb19161774f7a}{$\sim$\+Arab} ()
+\item 
+int \hyperlink{class_arab_a0200f0365cfc5ef5a35cac273f86ad0b}{calculate} ()
+\item 
+int \hyperlink{class_arab_aa9dfc0b92e76397bbd905ceeeebeaa45}{binary\+Opt} (std\+::string, int, int)
+\item 
+int \hyperlink{class_arab_a7dd22fd64705866419cc5b73c7231959}{unary\+Opt} (std\+::string, int)
+\item 
+int \hyperlink{class_arab_aa8eac0f26197eb68fa1753a7c33a6f2c}{to\+Int} (std\+::string)
+\item 
+std\+::string \hyperlink{class_arab_a051a742948dbc9f296b05436af050b4d}{to\+String} (int)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_arab}{Arab} class. menangani ekspresi yang berupa bilangan arab, turunan dari kelas \hyperlink{class_aritmatik}{Aritmatik} dan Mengimplementasi interface dari \hyperlink{class_bilangan}{Bilangan}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_arab_afdddf6ff9c7724ddb71c625db0847893}{}\index{Arab@{Arab}!Arab@{Arab}}
+\index{Arab@{Arab}!Arab@{Arab}}
+\subsubsection[{Arab}]{\setlength{\rightskip}{0pt plus 5cm}Arab\+::\+Arab (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_arab_afdddf6ff9c7724ddb71c625db0847893}
+A constructor. Membuat Objek \hyperlink{class_aritmatik}{Aritmatik} \hypertarget{class_arab_a980e87ff4bcc914e8206b8850bc19f2b}{}\index{Arab@{Arab}!Arab@{Arab}}
+\index{Arab@{Arab}!Arab@{Arab}}
+\subsubsection[{Arab}]{\setlength{\rightskip}{0pt plus 5cm}Arab\+::\+Arab (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{eks, }
+\item[{int}]{\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{class_arab_a980e87ff4bcc914e8206b8850bc19f2b}
+A constructor. Membuat Objek \hyperlink{class_aritmatik}{Aritmatik} 
+\begin{DoxyParams}{Parameters}
+{\em eks} & sebuah string \\
+\hline
+{\em mode} & a yang berupa integer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_arab_a2629b0540731753334ebb19161774f7a}{}\index{Arab@{Arab}!````~Arab@{$\sim$\+Arab}}
+\index{````~Arab@{$\sim$\+Arab}!Arab@{Arab}}
+\subsubsection[{$\sim$\+Arab}]{\setlength{\rightskip}{0pt plus 5cm}Arab\+::$\sim$\+Arab (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_arab_a2629b0540731753334ebb19161774f7a}
+A destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_arab_aa9dfc0b92e76397bbd905ceeeebeaa45}{}\index{Arab@{Arab}!binary\+Opt@{binary\+Opt}}
+\index{binary\+Opt@{binary\+Opt}!Arab@{Arab}}
+\subsubsection[{binary\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}int Arab\+::binary\+Opt (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{oprt, }
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_arab_aa9dfc0b92e76397bbd905ceeeebeaa45}
+Method yang mengembalikan hasil dari operasi binary Menghitung dua buah integer 
+\begin{DoxyParams}{Parameters}
+{\em a} & sebuah integer \\
+\hline
+{\em b} & sebuah integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hasil perhitungan binary 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_bilangan_acb958e0fade6bdfc3b6ce88bf57560bc}{Bilangan}.
+
+\hypertarget{class_arab_a0200f0365cfc5ef5a35cac273f86ad0b}{}\index{Arab@{Arab}!calculate@{calculate}}
+\index{calculate@{calculate}!Arab@{Arab}}
+\subsubsection[{calculate}]{\setlength{\rightskip}{0pt plus 5cm}int Arab\+::calculate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_arab_a0200f0365cfc5ef5a35cac273f86ad0b}
+Method yang mengembalikan hasil perhitungan Menghitung string postfix dengan stack. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_arab_aa9dfc0b92e76397bbd905ceeeebeaa45}{binary\+Opt} 
+
+\hyperlink{class_arab_a7dd22fd64705866419cc5b73c7231959}{unary\+Opt} 
+
+\hyperlink{class_arab_aa8eac0f26197eb68fa1753a7c33a6f2c}{to\+Int} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+hasil perhitungan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_bilangan_a519c33685bdc47e8386037ac8d2bfaa6}{Bilangan}.
+
+\hypertarget{class_arab_aa8eac0f26197eb68fa1753a7c33a6f2c}{}\index{Arab@{Arab}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!Arab@{Arab}}
+\subsubsection[{to\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int Arab\+::to\+Int (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_arab_aa8eac0f26197eb68fa1753a7c33a6f2c}
+Method yang mengembalikan integet Mengubah string menjadi Integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & sebuah string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bilangan integer hasil convert 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_bilangan_ab4fd66bd8e9179176f97f8b856eda103}{Bilangan}.
+
+\hypertarget{class_arab_a051a742948dbc9f296b05436af050b4d}{}\index{Arab@{Arab}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Arab@{Arab}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Arab\+::to\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{bil}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_arab_a051a742948dbc9f296b05436af050b4d}
+Method yang mengembalikan string Mengubah Integer menjadi string 
+\begin{DoxyParams}{Parameters}
+{\em bil} & sebuah integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_bilangan_ac712d0d2b78dabad769b0b1e9cef8dc6}{Bilangan}.
+
+\hypertarget{class_arab_a7dd22fd64705866419cc5b73c7231959}{}\index{Arab@{Arab}!unary\+Opt@{unary\+Opt}}
+\index{unary\+Opt@{unary\+Opt}!Arab@{Arab}}
+\subsubsection[{unary\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}int Arab\+::unary\+Opt (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{oprt, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_arab_a7dd22fd64705866419cc5b73c7231959}
+Method yang mengembalikan hasil dari operasi unary Menghitung satu buah integer 
+\begin{DoxyParams}{Parameters}
+{\em a} & sebuah integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bilangan integer sebuah hasil 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_bilangan_af812d372ad4de1afe2e6a4dc9e8f95ef}{Bilangan}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Arab.\+h\item 
+Arab.\+cpp\end{DoxyCompactItemize}
