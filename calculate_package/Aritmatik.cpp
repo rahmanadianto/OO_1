@@ -1,4 +1,5 @@
 /* Author : Rahman Adianto */
+/* NIM 		: 13513006 */
 
 #include "Aritmatik.h"
 

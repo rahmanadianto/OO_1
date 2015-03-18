@@ -1,3 +1,6 @@
+/* Author : Husni Munaya */
+/* NIM 		: 13513022 */
+
 #ifndef STACK_
 #define STACK_
 /**

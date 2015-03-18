@@ -1,4 +1,5 @@
-/* Author : Rahman Adianto */
+/* Author : Husni Munaya */
+/* NIM		: 13513022 */
 
 #ifndef _ROMAWIEXP_H
 #define _ROMAWIEXP_H

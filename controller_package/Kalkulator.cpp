@@ -1,23 +1,74 @@
+/* Author : Gazandi Cahyadarma */
+/* NIM 		: 13513078 */
+
 #include "Kalkulator.h"
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
+#include <iomanip>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 Kalkulator::Kalkulator(){}
 
 Kalkulator::~Kalkulator(){}
 
 void Kalkulator::run(){
-		std::string command;
+		system("clear");
+		std::cout << "***** Default Setting ****" << std::endl;
+		Setting::setSuccess();
+		std::cout << "Type 'help' for manual" << std::endl;
 
-		std::cout << "> ";
-		getline(std::cin, command);
-		while (command != "exit"){
+		std::string command;
+		std::string arg;
+		std::string args[2];
+		char* buf;
+
+		while ((buf = readline("> ")) != NULL && ((strcmp(buf,"quit") != 0))) {
+			if (buf[0]!= 0) {
+      	add_history(buf);
+      	command = buf;
+      	std::stringstream stream(command);
+      	int i = 0;
+      	while (stream >> arg && i < 2) {
+      		args[i] = arg;
+      		i++;
+      	}
+      }
 			if (command == "set"){
+				system("clear");
+				history.empty();
+				clear_history();
 				Setting::setModeEkspresi();
 				Setting::setModeOperator();
 				Setting::setModeBilangan();
 				Setting::setSuccess();
+			}
+			else if (command == "showAll") {
+				history.showAll();
+			}
+			else if (command == "save") {
+				history.save();
+			}
+			else if (args[0] == "showMem") {
+				history.showMem(std::stoi(args[1]));
+			}
+			else if (args[0] == "undo") {
+				int n = std::stoi(args[1]);
+				history.undo(n);
+			}
+			else if (args[0] == "redo") {
+				int n = std::stoi(args[1]);
+				history.redo(n);
+			}
+			else if (command == "help") {
+				std::cout << "Petunjuk Penggunaan Program Kalkulator" << std::endl;
+				std::cout << std::setw(15) << std::left << "1. set " << ": digunakan untuk melakukan setting terhadap mode kalkulator" << std::endl;
+				std::cout << std::setw(15) << std::left << "2. showAll " << ": menampilkan semua history perhitungan yang pernah dilakukan " << std::endl;
+				std::cout << std::setw(15) << std::left << "3. showMem n " << ": menampilkan n history perhitungan terakhir" << std::endl;
+				std::cout << std::setw(15) << std::left << "4. redo n " << ": mengembalikan n buah history perhitungan yang pernah diundo" << std::endl;
+				std::cout << std::setw(15) << std::left << "5. undo n " << ": menghapus n history perhitungan dimulai dari history terakhir" << std::endl;
+				std::cout << std::setw(15) << std::left << "6. quit " << ": keluar dari program" << std::endl;
 			}
 			else{
 				try {
@@ -37,9 +88,10 @@ void Kalkulator::run(){
 					e.displayMsg();
 				} catch (RomawiExp& e){
 					e.displayMsg();
+				} catch (...){
+					std::cout << "command tidak tepat" << std::endl;
 				}
 			}
-			std::cout << "> ";
-			getline(std::cin, command);
+			previous_history();
 		}	
 }

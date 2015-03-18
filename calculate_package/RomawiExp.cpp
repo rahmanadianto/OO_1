@@ -1,4 +1,5 @@
-/* Author : Rahman Adianto */
+/* Author : Husni Munaya */
+/* NIM		: 13513022 */
 
 #include "RomawiExp.h"
 #include <iostream>

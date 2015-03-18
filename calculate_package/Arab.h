@@ -1,4 +1,5 @@
 /* Author : Rahman Adianto */
+/* NIM		: 13513006 */
 
 #ifndef _ARAB_H
 #define _ARAB_H

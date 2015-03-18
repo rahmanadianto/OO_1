@@ -1,4 +1,5 @@
 /* Author : Rahman Adianto */
+/* NIM 		: 13513006 */
 
 #ifndef _ARITMATIK_H
 #define _ARITMATIK_H

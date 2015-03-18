@@ -1,3 +1,6 @@
+/* Author : Husni Munaya */
+/* NIM 		: 13513022 */
+
 #ifndef HISTORY_H
 #define HISTORY_H
 
@@ -8,38 +11,48 @@
 */
 class History {
 public:
-	// ctor
 	/**
 	* A constructor.
 	*/
 	History();
-	// dtor
+
 	/**
 	* A destructor
 	*/
 	~History();
+
 	/**
 	* public void 
 	* save main memory ke file eksternal;
 	*/
 	void save();
+
 	/**
 	* public void 
 	* menampilkan memory sebanyak n;
 	* @param n 
 	*/
-	void showMem(int n = 1);
+	void showMem(int n);
+
 	/**
 	* public void 
 	* menampilkan semua memory;
 	*/
 	void showAll();
+
 	/**
 	* public void 
 	* menambahkan string ke memory 
 	* @param s
 	*/
 	void pushToMem(std::string s);
+
+	/**
+	* public void
+	* menghapus isi memory
+	*/
+	void empty();
+
 	/**
 	* output n perintah terakhir ke layar 
 	* n - 1 perintah terakhir di-pop dan di-push di push ke temp memory
@@ -47,8 +60,8 @@ public:
 	* @param n jumlah undo
 	* @return string dari memory
 	*/
- 
-	std::string undo(int n = 1);
+	std::string undo(int n);
+
 	/**
 	* output n perintah terakhir yang ada di temp memory ke layar
 	* n - 1 perintak terakhir di-pop dan di-push ke main memory
@@ -56,7 +69,7 @@ public:
 	* @param n jumlah redo
 	* @return string dari memory
 	*/
-	std::string redo(int n = 1);
+	std::string redo(int n);
 
 
 private:
@@ -65,6 +78,7 @@ private:
 	* memori utama yang berupa stack of string
 	*/
 	stack<std::string> mainMemory;
+	
 	/**
 	* public attribute
 	* memori temporary yang berupa stack of string

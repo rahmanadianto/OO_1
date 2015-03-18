@@ -1,3 +1,6 @@
+/* Author : Gazandi Cahyadarma */
+/* NIM 		: 13513078 */
+
 #ifndef _SETTING_H
 #define _SETTING_H
 

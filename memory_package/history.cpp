@@ -1,3 +1,6 @@
+/* Author : Husni Munaya */
+/* NIM 		: 13513022 */
+
 #include "history.h"
 #include <fstream>
 #include <iostream>
@@ -23,26 +26,39 @@ void History::save() {
 }
 
 void History::showMem(int n) {
+	std::cout << "History perhitungan :" << std::endl;
 	int i = 0;
 	stack<std::string> temp(mainMemory);
-	
+	stack<std::string> temp2;
+
 	while(!mainMemory.empty() && i < n) {
-		std::cout << mainMemory.top() << std::endl;
+		temp2.push( mainMemory.top() );
 		mainMemory.pop();
 		i++;
+	}
+
+	while(!temp2.empty()) {
+		std::cout << temp2.top() << std::endl;
+		temp2.pop();
 	}
 	
 	mainMemory = temp;
 }
 
 void History::showAll() {
+	std::cout << "History perhitungan :" << std::endl;
 	stack<std::string> temp(mainMemory);
+	stack<std::string> temp2;
 
 	while(!mainMemory.empty()) {
-		std::cout << mainMemory.top() << std::endl;
+		temp2.push(mainMemory.top());
 		mainMemory.pop();
 	}
 
+	while(!temp2.empty()) {
+		std::cout << temp2.top() << std::endl;
+		temp2.pop();
+	}
 	mainMemory = temp;
 }
 
@@ -50,18 +66,26 @@ void History::pushToMem(std::string s) {
 	mainMemory.push(s);
 }
 
-std::string History::undo(int n) {
-	if (!mainMemory.empty() && n < mainMemory.length()) {
-		std::string s;
-		s = mainMemory.top();
+void History::empty() {
+	while(!mainMemory.empty()) {
 		mainMemory.pop();
 	}
 }
 
+std::string History::undo(int n) {
+	int i = 0;
+	while(!mainMemory.empty() && i < n) {
+		tempMemory.push(mainMemory.top());
+		mainMemory.pop();
+		++i;
+	}
+}
+
 std::string History::redo(int n) {
-	if (!mainMemory.empty() && n < mainMemory.length()) {
-		std::string s;
-		s = tempMemory.top();
-		tempMemory.top();
+	int i = 0;
+	while(!tempMemory.empty() || i < n) {
+		mainMemory.push(tempMemory.top());
+		tempMemory.pop();
+		++i;
 	}
 }

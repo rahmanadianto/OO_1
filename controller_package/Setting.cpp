@@ -1,3 +1,6 @@
+/* Author : Gazandi Cahyadarma */
+/* NIM 		: 13513078 */
+
 #include "Setting.h"
 #include <iostream>
 #include <cstdlib>
@@ -58,7 +61,7 @@ void Setting::setModeBilangan(){
 }
 
 void Setting::setSuccess(){
-	std::cout << "Set Success" << std::endl;
+	std::cout << "Calculator Mode" << std::endl;
 	std::cout << "Ekspresi : " << EksToString(modeEkspresi) << std::endl; 
 	std::cout << "Operator : " <<	OprtToString(modeOperator) << std::endl;
 	std::cout << "Bilangan : " << BilToString(modeBilangan) << std::endl;

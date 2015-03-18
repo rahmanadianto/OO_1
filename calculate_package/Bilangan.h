@@ -1,3 +1,6 @@
+/* Author : Rahman Adianto */
+/* NIM 		: 13513006 */
+
 #ifndef _BILANGAN_H
 #define _BILANGAN_H
 

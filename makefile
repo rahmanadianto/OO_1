@@ -1,7 +1,7 @@
 all : main clean
 
 main : main.cpp Arab.o Romawi.o Boolean.o ArabExp.o RomawiExp.o Aritmatik.o Ekspresi.o history.o Kalkulator.o Setting.o
-	g++ main.cpp Arab.o Romawi.o Boolean.o ArabExp.o RomawiExp.o Aritmatik.o Ekspresi.o history.o Kalkulator.o Setting.o -o main
+	g++ main.cpp Arab.o Romawi.o Boolean.o ArabExp.o RomawiExp.o Aritmatik.o Ekspresi.o history.o Kalkulator.o Setting.o -o main -lreadline
 
 Arab.o : calculate_package/Arab.cpp
 	g++ -c calculate_package/Arab.cpp -std=c++11
@@ -28,7 +28,7 @@ history.o : memory_package/history.cpp
 	g++ -c memory_package/history.cpp
 
 Kalkulator.o : controller_package/Kalkulator.cpp
-	g++ -c controller_package/Kalkulator.cpp
+	g++ -c controller_package/Kalkulator.cpp -std=c++11
 
 Setting.o : controller_package/Setting.cpp
 	g++ -c controller_package/Setting.cpp

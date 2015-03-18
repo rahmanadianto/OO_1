@@ -1,3 +1,6 @@
+/* Author : Gazandi Cahyadarma */
+/* NIM 		: 13513078 */
+
 #ifndef _KALKULATOR_H
 #define _KALKULATOR_H
 
