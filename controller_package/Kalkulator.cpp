@@ -1,5 +1,6 @@
 #include "Kalkulator.h"
 #include <iostream>
+#include <cstring>
 #include <cstdlib>
 
 Kalkulator::Kalkulator(){}
