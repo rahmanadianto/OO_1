@@ -55,5 +55,6 @@ contoh :
 ## Pilihan Bilangan
 Terdapat dua pilihan bilangan yang dapat digunakan untuk operator aritmatika yaitu :
 ### 1. Bilangan Arab
-
+Bilangan arab yang dapat ditangani oleh program adalah -2^31 sampai 2^31 - 1
 ### 2. Bilangan Romawi
+Nilai maksimal bilangan romawi adalah 4000 (MMMM)
